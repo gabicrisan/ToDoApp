@@ -10,7 +10,7 @@ namespace ToDo
 
         private int updateID = 0;
 
-        public CreatePage()
+        public CreatePage(int id)
         {
             vm = new CreatePageViewModel();
             BindingContext = vm;
@@ -23,12 +23,12 @@ namespace ToDo
             updateID = id;
         }
 
-        //public CreatePage()
-        //{
-        //    vm = new CreatePageViewModel();
-        //    BindingContext = vm;
-        //    InitializeComponent();
-        //}
+        public CreatePage()
+        {
+            vm = new CreatePageViewModel();
+            BindingContext = vm;
+            InitializeComponent();
+        }
 
         public void OnSave(object o, EventArgs e)
         {

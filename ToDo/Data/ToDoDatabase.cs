@@ -14,8 +14,7 @@ namespace ToDo
 
         public ToDoDatabase()
         {
-            //database = DependencyService.Get<ISQLite>.GetConnection();
-            database = DependencyService.Get<ISQLite>.
+            database = DependencyService.Get<ISQLite>().GetConnection();
             database.CreateTable<ToDoItem>();
         }
 

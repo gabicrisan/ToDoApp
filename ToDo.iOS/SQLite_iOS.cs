@@ -14,7 +14,7 @@ namespace ToDo.iOS
 
         public SQLite.SQLiteConnection GetConnection()
         {
-            var path = "/users/gabi/Data/ToDo.db";
+            var path = "/Users/gabi/Data/ToDo.db";
             File.Open(path, FileMode.OpenOrCreate);
             var conn = new SQLite.SQLiteConnection(path);
             return conn;
