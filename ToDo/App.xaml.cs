@@ -6,6 +6,20 @@ namespace ToDo
 {
     public partial class App : Application
     {
+        private static ToDoDatabase database;
+
+        public static ToDoDatabase Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new ToDoDatabase();
+                }
+                return database;
+            }
+        }
+
         public App()
         {
             InitializeComponent();
